@@ -73,4 +73,9 @@ public class TestUI {
         Assert.assertEquals(creditCardPage.isMobileNumberErrorMessageDisplayed(), true, "Error message displayed for empty mobile number");
         Assert.assertEquals(creditCardPage.isEmailErrorMessageDisplayed(), true, "Error message displayed for empty email address");
     }
+    
+    @AfterTest
+    public void tearDown(){
+        driver.quit();
+    }
 }
